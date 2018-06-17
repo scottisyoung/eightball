@@ -1,0 +1,295 @@
+body {
+    width: 100%;
+    margin: 0 auto;
+    background: linear-gradient(to bottom, rgba(34, 34, 34, 0.925) 0%, rgba(114, 114, 114, 0.247) 70%, #ffffff 100%);
+    background-repeat: no-repeat;
+  }
+
+  .centerMagic {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 60px;
+  }
+
+.stage {
+    width: 400px;
+    height: 400px;
+    display: inline-block;
+    margin: 20px;
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    -ms-perspective: 1200px;
+    -o-perspective: 1200px;
+    perspective: 1200px;
+    -webkit-perspective-origin: 50% 50%;
+    -moz-perspective-origin: 50% 50%;
+    -ms-perspective-origin: 50% 50%;
+    -o-perspective-origin: 50% 50%;
+    perspective-origin: 50% 50%;
+  }
+
+.ball {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: 50%;
+    position: relative;
+    background: radial-gradient(circle at 50% 120%, #2c2c2c, #0a0a0a 80%, #000000 100%);
+  }
+
+  .ball:before {
+    content: "";
+    position: absolute;
+    background: radial-gradient(circle at 50% 120%,  rgba(255, 255, 255, 0.192), rgba(255, 255, 255, 0) 70%);
+    border-radius: 50%;
+    bottom: 2.5%;
+    left: 5%;
+    opacity: 0.6;
+    height: 100%;
+    width: 90%;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    z-index: 2;
+}
+
+  .ball:after {
+    width: 80%;
+    height: 70%;
+    content: "";
+    position: absolute;
+    top: 9%;
+    left: 7%;
+    border-radius: 50%;
+    background: radial-gradient(circle at 50% 50%,  rgba(163, 163, 163, 0.623), rgba(255, 255, 255, 0.63) 14%, rgba(255, 255, 255, 0) 24%);
+    -webkit-transform: translateX(-80px) translateY(-90px) skewX(-20deg);
+    -moz-transform: translateX(-80px) translateY(-90px) skewX(-20deg);
+    -ms-transform: translateX(-80px) translateY(-90px) skewX(-20deg);
+    -o-transform: translateX(-80px) translateY(-90px) skewX(-20deg);
+    transform: translateX(-80px) translateY(-90px) skewX(-20deg);
+    filter: blur(25px);
+    -webkit-filter: blur(25px);
+}
+  
+  .ball .shadow {
+    margin-top: 50px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.164) 40%, rgba(0, 0, 0, 0) 50%);
+    -webkit-transform: rotateX(90deg) translateZ(-150px);
+    -moz-transform: rotateX(90deg) translateZ(-150px);
+    -ms-transform: rotateX(90deg) translateZ(-150px);
+    -o-transform: rotateX(90deg) translateZ(-150px);
+    transform: rotateX(90deg) translateZ(-150px);
+    z-index: -1;
+}
+
+  .eight {
+    -webkit-transform: translateX(68px)translateY(-60px) skewX(15deg) skewY(2deg);
+    -moz-transform: translateX(68px)translateY(-60px) skewX(15deg) skewY(2deg);
+    -ms-transform: translateX(68px)translateY(-60px) skewX(15deg) skewY(2deg);
+    -o-transform: translateX(68px)translateY(-60px) skewX(15deg) skewY(2deg);
+    transform: translateX(68px)translateY(-60px) skewX(15deg) skewY(2deg);
+    position: absolute;
+    -webkit-animation: move-eight-skew 10s ease-out infinite;
+    -moz-animation: move-eight-skew 10s ease-out infinite;
+    -o-animation: move-eight-skew 10s ease-out infinite;
+    -ms-animation: move-eight-skew 10s ease-out infinite;
+    animation: move-eight-skew 10s ease-out infinite;
+    -webkit-transform: translateX(68px) translateY(-60px) skewX(15deg) skewY(2deg);
+    overflow: hidden;
+}
+
+  .ball .eight {
+    width: 160px;
+    height: 160px;
+    margin: 30%;
+    border: 2px solid rgba(71, 71, 71, 0.849);
+    background: rgba(1, 7, 26, 0.815);
+    border-radius: 50%;
+    -webkit-transform: translateX(68px) translateY(-60px) skewX(15deg) skewY(2deg);
+    -moz-transform: translateX(68px) translateY(-60px) skewX(15deg) skewY(2deg);
+    -ms-transform: translateX(68px) translateY(-60px) skewX(15deg) skewY(2deg);
+    -o-transform: translateX(68px) translateY(-60px) skewX(15deg) skewY(2deg);
+    transform: translateX(68px) translateY(-60px) skewX(15deg) skewY(2deg);
+    position: absolute;
+  }
+
+  .ball #triangle {
+        width: 0;
+        margin-left: 20px;
+        margin-top: 45px;
+        height: 0;
+        border-left: 60px solid transparent;
+        border-right: 60px solid transparent;
+        border-top: 100px solid rgba(1, 1, 71, 0.781);
+        transform: translateX(20px) translateY(50px) skewX(6deg) skewY(1deg);
+        position: absolute;
+        -webkit-transform: translateX(20px) translateY(50px) skewX(6deg) skewY(1deg);
+        -moz-transform: translateX(20px) translateY(50px) skewX(6deg) skewY(1deg);
+        -ms-transform: translateX(20px) translateY(50px) skewX(6deg) skewY(1deg);
+        -o-transform: translateX(20px) translateY(50px) skewX(6deg) skewY(1deg);   
+}
+
+.animated {
+    -webkit-animation: animated 10s infinite;
+    -moz-animation:    animated 10s infinite;
+    -o-animation:      animated 10s infinite;
+    animation:         animated 10s infinite;
+}
+
+@-webkit-keyframes animated {
+    0%   { opacity: .2; }
+    50%  { opacity: .8; }
+    100% { opacity: .08; }
+    
+  }
+  @-moz-keyframes animated {
+    0%   { opacity: .2; }
+    50%  { opacity: .8; }
+    100% { opacity: .08; }
+  }
+  @-o-keyframes animated {
+    0%   { opacity: .2; }
+    50%  { opacity: .8; }
+    100% { opacity: .08; }
+  }
+  @keyframes animated {
+    0%   { opacity: .2; }
+    50%  { opacity: .8; }
+    100% { opacity: .08; }
+  }
+
+  #triangle {
+    -webkit-animation: triangle  20s infinite;
+    -moz-animation:    triangle 20s infinite;
+    -o-animation:      triangle 20s infinite;
+    animation:         triangle  20s infinite;
+}
+
+@keyframes triangle {
+    0% { transform: rotate(0deg); -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); margin-right: 10px; }
+    20% { transform: rotate(30deg); -webkit-transform: rotate(30deg); -moz-transform: rotate(30deg); -ms-transform: rotate(30deg); -o-transform: rotate(30deg); margin-top: 120px; }
+    50% { transform: rotate(-10deg); -webkit-transform: rotate(-10deg); -moz-transform: rotate(-10deg); -ms-transform: rotate(-10deg); -o-transform: rotate(-10deg); margin-right: 120px;}
+    70% { transform: rotate(-50deg); -webkit-transform: rotate(-50deg); -moz-transform: rotate(-50deg); -ms-transform: rotate(-50deg); -o-transform: rotate(-50deg); margin-left: 20px; }
+    100% { transform: rotate(0deg); -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); margin-left: 10px;}
+}
+
+  .ball .eight #triangle:before {
+      content: '';
+      position: relative;
+      left: 10px;
+      margin-left: -50px;
+      top: -100px;
+      margin-top: 30px;
+  }
+
+  .response {
+        color: rgba(163, 163, 163, 0.918);
+      text-align: center;
+      margin-top: -110px;
+      font-size: 9px;
+      line-height: 15px;
+      text-shadow: 5px 5px 20px rgba(8, 138, 231, 0.904);
+      font-family: arial;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  @keyframes move-eight-skew {
+    0% {
+      transform: none;
+    }
+    20% {
+      transform: translateX(-68px) translateY(30px) skewX(15deg) skewY(-10deg) scale(0.95);
+    }
+    25%, 44% {
+        transform: none;    ;
+        -webkit-transform: none    ;
+        -moz-transform: none    ;
+        -ms-transform: none    ;
+        -o-transform: none    ;
+}   
+
+    50%, 60% {
+      transform: translateX(68px) translateY(-40px) skewX(5deg) skewY(2deg) scaleX(0.95);
+    }
+    66%, 100% {
+      transform: none;
+    }
+  }
+
+  .questionParent {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+  }
+
+  .centerList {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  input {
+      width: 1000px;
+      height: 40px;
+      border: none;
+      padding-left: 20px;
+      font-size: 16px;
+      border-radius: 5px;  
+      -webkit-border-radius: 5px  ;
+      -moz-border-radius: 5px  ;
+      -ms-border-radius: 5px  ;
+      -o-border-radius: 5px  ;
+}
+
+  ::placeholder {
+      color: rgba(15, 15, 94, 0.664);
+      text-align: left;
+      font-size: 16px;
+  }
+
+  .btn {
+     margin-left: 20px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 40px;
+     width: 150px;
+     background-color: grey;
+     border-radius: 5px;
+     -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+     -ms-border-radius: 5px;
+     -o-border-radius: 5px;
+}
+
+  .askedParent {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .questionsAsked {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    width: 100%;
+    height: 300px;
+    background-color: black;
+    margin-top: 20px;
+  }
+
+  .elem {
+        width: 500px;
+        background-color: gray;
+        color: black;
+}
+
+  
