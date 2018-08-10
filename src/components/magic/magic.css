@@ -17,7 +17,7 @@ body {
     position: absolute;
     top: 230px;
     left: 50px;
-    color: rgb(97, 11, 11);
+    color: rgb(136, 7, 7);
     font-family: 'Cormorant Unicase', serif;
     font-size: 80px;
     text-shadow: 2px 4px 10px rgb(20, 20, 20);
@@ -273,10 +273,11 @@ input:focus {
 }
 
   ::placeholder {
-      color: rgba(145, 145, 145, 0.637);
+      color: rgba(116, 116, 116, 0.815);
       text-align: left;
       font-size: 20px;
-      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-style: italic;
   }
 
   .btn {
@@ -330,8 +331,8 @@ input:focus {
   }
 
   .questions {
-    margin-top: 10px;
-    margin-bottom: 5px;
+    margin-top: 20px;
+    margin-bottom: 15px;
     margin-left: 20px;
     color: rgb(139, 139, 139);
     font-size: 24px;

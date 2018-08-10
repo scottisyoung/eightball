@@ -94,7 +94,7 @@ class Magic extends Component {
                 <div className="centerList">
                     <form onSubmit = {(e) => {this.handleSubmit(e, this.state.userQuestion); this.setState({userQuestion: ''}); this.handleAnswer(this.state.eightBall)}}>
                             <input className = "input"
-                                placeholder = "Ask the Magic 8 Ball Your Question!"
+                                placeholder = "Ask a Yes or No question to Witness the MAGIC!"
                                 type = 'Text'
                                 value = {this.state.userQuestion}
                                 onChange = {(e) => {this.handleInput(e.target.value)}}>
